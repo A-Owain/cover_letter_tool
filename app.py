@@ -102,5 +102,9 @@ def index():
 
     return render_template("index.html")
 
+def generate_report():
+    # Logic for generating the report
+    return "Report generated!"
+
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
