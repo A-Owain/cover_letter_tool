@@ -3,6 +3,9 @@ from fpdf import FPDF
 from io import BytesIO
 from bidi.algorithm import get_display
 from arabic_reshaper import reshape
+from flask_cors import CORS
+CORS(app)
+
 
 class CustomPDF(FPDF):
     def __init__(self, date):
