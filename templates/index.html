@@ -1,18 +1,176 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
-    <title>Tray Cover Letter Generator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مولد خطابات Tray</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: "Plus Jakarta Sans", serif;
+            background: linear-gradient(135deg, #EEECEC, #E29191);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Container */
+        .container {
+            font-family: "Plus Jakarta Sans", serif;
+            width: 400px;
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Title */
+        .container h2 {
+            font-family: "Plus Jakarta Sans", serif;
+            text-align: center;
+            color: #EA2F2F;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        /* Form Elements */
+        label {
+            font-family: "Plus Jakarta Sans", serif;
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        textarea {
+            font-family: "Plus Jakarta Sans", serif;
+            width: 100%;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+            background: #f9f9f9;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="date"]:focus,
+        textarea:focus {
+            border-color: #EA2F2F;
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        /* Button */
+        button {
+            font-family: "Plus Jakarta Sans", serif;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background-color: #EA2F2F;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #AA0E0E;
+            transform: scale(1.02);
+        }
+
+        /* Footer Text */
+        footer {
+            font-family: "Plus Jakarta Sans", serif;
+            margin-top: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: #555;
+        }
+
+        /* Responsive Design for Mobile Devices */
+        @media (max-width: 768px) {
+        body {
+            padding: 15px; /* Add padding on smaller screens */
+        }
+
+        .container {
+            width: 100%; /* Full width on smaller screens */
+            padding: 20px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .container h2 {
+            font-size: 18px; /* Adjust title size */
+        }
+
+        input[type="text"],
+        input[type="date"],
+        textarea {
+            font-size: 14px; /* Slightly smaller font size */
+            padding: 8px 12px;
+        }
+
+        button {
+            font-size: 14px; /* Adjust button size */
+            padding: 10px;
+        }
+        }
+
+        @media (max-width: 480px){
+        .container h2 {
+            font-size: 16px; /* Smaller title size for very small screens */
+        }
+
+        button {
+            font-size: 13px;
+            padding: 8px;
+        }
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Generate Your Cover Letter</h1>
-    <form method="POST">
-        <label for="recipient_name">Recipient Name:</label><br>
-        <input type="text" id="recipient_name" name="recipient_name" required><br><br>
+    <div class="container">
+        <h2>إنشاء خطاب جديد</h2>
+        <form method="POST">
+            <label for="recipient_name">اسم المستلم:</label>
+            <input type="text" id="recipient_name" name="recipient_name" placeholder="خلود مرزوق" required>
 
-        <label for="subject">Subject:</label><br>
-        <input type="text" id="subject" name="subject" required><br><br>
+            <label for="subject">الموضوع:</label>
+            <input type="text" id="subject" name="subject" placeholder="ادخل موضوع الخطاب" required>
 
-        <button type="submit">Generate PDF</button>
-    </form>
+            <label for="date">تاريخ الخطاب:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="body">نص الخطاب:</label>
+            <textarea id="body" name="body" rows="6" required placeholder="اكتب نص الخطاب هنا..."></textarea>
+
+            <button type="submit">إنشاء الخطاب</button>
+        </form>
+        <footer>جميع الحقوق محفوظة &copy; 2025 Tray</footer>
+    </div>
 </body>
 </html>
