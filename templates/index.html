@@ -155,7 +155,7 @@
 <body>
     <div class="container">
         <h2>إنشاء خطاب جديد</h2>
-        <form action="{{ url_for('generate_report') }}" method="POST">
+        <form action="/generate_report" method="POST">
             <label for="recipient_name">اسم المستلم:</label>
             <input type="text" id="recipient_name" name="recipient_name" placeholder="خلود مرزوق" required>
 
