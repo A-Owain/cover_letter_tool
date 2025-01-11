@@ -87,6 +87,7 @@ def generate_cover_letter(data):
 
 # Flask app setup
 app = Flask(__name__)
+app.config["DEBUG"] = True
 
 @app.route("/", methods=["GET", "POST"])
 def index():
