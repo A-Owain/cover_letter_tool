@@ -89,6 +89,10 @@ def generate_cover_letter(data):
 app = Flask(__name__)
 app.config["DEBUG"] = True
 
+@app.route("/static/<path:filename>")
+def static_files(filename):
+    return send_from_directory(app.static_folder, filename)
+
 @app.route("/download_report/<filename>")
 def download_report(filename):
     return send_from_directory("static/reports", filename)
